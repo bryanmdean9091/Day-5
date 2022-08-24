@@ -7,40 +7,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <!-- <script defer src="./js/java.js"></script> -->
-    <script defer src="./js/daily.js"></script>
+    <!-- <script defer src="./js/daily.js"></script> -->
+    <script src="https://kit.fontawesome.com/fb1b695bdf.js" crossorigin="anonymous"></script>
     <title>Day 5</title>
 </head>
 
-<body>
-    <div class="box">
-        <div class="prompt"></div>
 
+
+
+
+
+
+
+
+
+
+    <div class="form-box">
+        <h1>Please enter your password</h1>
+        <p>PW must be between 6-20 characters & begin with a letter</p>
+        <div class="input-box">
+            <i class="fa-solid fa-key"></i>
+            <input type="password" placeholder="Password" id="myInput">
+           <span class="eye" onclick="myFunction()"> 
+            <i id="hide1" class="fa-solid fa-eye"></i>
+            <i id="hide2" class="fa-solid fa-eye-slash"></i>
+           </span>
+        </div>
+        <button type="button" class="login-btn" onclick="submit()" id="submit">Submit</button>
     </div>
 
+    <script>
+        function myFunction() {
+            let x = document.getElementById("myInput");
+            let y = document.getElementById("hide1");
+            let z = document.getElementById("hide2");
 
+            if(x.type === 'password'){
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
+            }
+            else{
+                x.type = "password";
+                y.style.display = "none";
+                z.style.display = "block";
+            
+            }
+        };
+     function submit(){
+         let pw =  document.getElementById("myInput");
+         console.log(pw)
 
-
-
-
-
-
-<h1 class="message">Please enter a password between 6-20 characters. Password must begin with a letter</h1>
-
-    <div class="box">
-        <div class="prompt">
-            <div id="error"></div>
-            <form id="form" action="/" method="get">
-
-                <label class="pw" for="password">Password</label>
-                <input id="password" name="password" type="password" required>
-
-                <button id="submit" type="submit">Submit</button>    
-
-            </form>
-           
-        </div>
+        if(pw.value.length < 6 || pw.value.length > 20 ){
+            alert("Password must be between 6-20 characters in length")    
+        }
+        else if (pw.value.charAt(0) >= 0 && pw.value.charAt(0) <= 9){
+            alert("Password must begin with a letter");
+        }
+        else {
         
-    </div> 
+        const submitClear = document.getElementById("submit");
+        submitClear.addEventListener("click", function clearField(){
+            pw.value = ""
+            alert("Password is acceptable");
+           
+        
+        })}
+        
+
+    }
+
+
+
+
+
+
+
+
+    </script>
 
 
 

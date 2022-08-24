@@ -53,21 +53,21 @@
 // }
 // passWord()
 
-const password = document.getElementById('password')
-const form = document.getElementById('form')
-const errorElement = document.getElementById('error')
-//function pw() {
-form.addEventListener('submit', (e) => {
-    let messages = []
-    if (password.value.length < 6 || password.value.length > 20 ) {
-        messages.push('Password must be between 6-20 characters')   
-    }
-    else 
-    messages.push('Password is acceptable')
-    if (messages.length > 0) {
-    e.preventDefault()
-    errorElement.innerText = messages.join(', ')
-}
-})
+// const password = document.getElementById('password')
+// const form = document.getElementById('form')
+// const errorElement = document.getElementById('error')
+// //function pw() {
+// form.addEventListener('submit', (e) => {
+//     let messages = []
+//     if (password.value.length < 6 || password.value.length > 20 ) {
+//         messages.push('Password must be between 6-20 characters')   
+//     }
+//     else 
+//     messages.push('Password is acceptable')
+//     if (messages.length > 0) {
+//     e.preventDefault()
+//     errorElement.innerText = messages.join(', ')
+// }
+// })
 //}
 //pw()
