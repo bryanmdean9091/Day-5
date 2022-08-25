@@ -24,7 +24,7 @@
 
     <div class="form-box">
         <h1>Please enter your password</h1>
-        <p>PW must be between 6-20 characters & begin with a letter</p>
+        <p>PW must be between 6-20 characters & begins with a letter</p>
         <div class="input-box">
             <i class="fa-solid fa-key"></i>
             <input type="password" placeholder="Password" id="myInput">
@@ -33,7 +33,7 @@
             <i id="hide2" class="fa-solid fa-eye-slash"></i>
            </span>
         </div>
-        <button type="button" class="login-btn" onclick="submit()" id="submit">Submit</button>
+        <button type="button" class="login-btn" onclick="submit()"id="submit">Submit</button>
     </div>
 
     <script>
@@ -56,26 +56,25 @@
         };
      function submit(){
          let pw =  document.getElementById("myInput");
-         console.log(pw)
+         //console.log(pw)
 
         if(pw.value.length < 6 || pw.value.length > 20 ){
-            alert("Password must be between 6-20 characters in length")    
+            alert("Password must be between 6-20 characters in length");   
         }
         else if (pw.value.charAt(0) >= 0 && pw.value.charAt(0) <= 9){
             alert("Password must begin with a letter");
+             
         }
         else {
         
         const submitClear = document.getElementById("submit");
+        alert("Password is acceptable");
         submitClear.addEventListener("click", function clearField(){
             pw.value = ""
-            alert("Password is acceptable");
-           
-        
+            
         })}
-        
-
     }
+    
 
 
 
